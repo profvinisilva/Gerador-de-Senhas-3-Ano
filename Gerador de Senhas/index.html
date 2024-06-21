@@ -2,21 +2,79 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de Senhas</title>
-    <link rel="stylesheet" href="style.css">   
-    
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="conteudo-titulo">
-        <img src="" alt="cadeado fechado">
-        <h1 class="titulo-principal">Gerador de Senhas</h1>
-        <h2 class="titulo-secundario">Gerando senhas aleatorias</h2>
+    <section class="conteudo">
+     <div class="conteudo-titulo">
+     <img src="/unlock.svg" alt="Cadeado fechado" class="conteudo-imagem">
+        <h1 class="titulo-primario">Gerador de Senhas</h1>
+        <h2 class="titulo-secundario">Gere instantaneamente uma senha aleatoria e segura</h2>
     </div>
+
     <div class="conteudo-senha">
-        <input type="text">
+        <label for="senha">Senha</label>
+        <input name="senha" type="text" id="campo-senha" readonly>
     </div>
+
+    <div class="parametro">
+        <h3 class="parametro-titulo">Personalize sua senha</h3>
+
+        <div class="parametro-coluna__senha">
+            <div class="parametro-senha">
+                <h4 class="parametro-senha__titulo">Número de Caracteres</h4>
+                <div class="parametro-senha-botoes">
+                <button class="parametro-senha__botao">-</button>
+                <p class="parametro-senha__texto"></p>
+                <button class="parametro-senha__botao">+</button>
+                </div>
+            </div>
+
+            <div class="parametro-senha">
+                <h4 class="parametro-senha__titulo">Caracteristica da Senha</h4>
+                
+                <div class="parametro-senha-checkbox" >
+                <input name="maiusculo" type="checkbox" class="checkbox" checked>
+                <label for="maiusculo">Letras maiusculas</label>
+                </div>
+
+                <div class="parametro-senha-checkbox">
+                <input name="minusculo" type="checkbox" class="checkbox">
+                <label for="minusculo">Letras minusculas</label>
+                </div>
+
+                <div class="parametro-senha-checkbox">
+                <input name="numeros" type="checkbox" class="checkbox">
+                <label for="numeros">Numeros</label>
+                </div>
+ 
+                <div class="parametro-senha-checkbox"></div>
+                <input name="simbolos" type="checkbox" class="checkbox">
+                <label for="simbolos">Simbolos</label>
+                </div>
+
+            </div>
+
+            <div class="parametro-senha">
+                <h4 class="parametro-senha__titulo">Força da Senha</h4>
+
+                <div class="barra"></div>
+
+                <div class="forca fraca"></div>
+
+                <div class="parametro-senha-textos">
+                <p>Fraca</p>
+                <p>Média</p>
+                <p>Forte</p>
+                </div>
+                <p class="entropia"></p>
+        </div>
+    </div>
+    </div>
+    </section>
+    <script src="/main.js"></script>
 </body>
 </html>
